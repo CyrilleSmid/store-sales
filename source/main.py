@@ -1,7 +1,8 @@
 # Data
 import numpy as np
 import pandas as pd
-import numexpr
+
+pd.set_option('display.max_rows', 60)
 
 # Models
 from sklearn.linear_model import LogisticRegression 
@@ -32,6 +33,7 @@ from sklearn import metrics
 #Other
 import re
 
+import data_processing
+
 if __name__ == "__main__":
-    df = pd.read_csv("../datasets/train.csv")
-    print(df.describe())
+    df = pd.read_csv("../datasets/train_combined.csv")
